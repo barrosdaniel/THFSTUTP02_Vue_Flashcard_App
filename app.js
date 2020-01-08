@@ -27,7 +27,9 @@ new Vue({
     cards: cards,
   },
   methods: {
-
+    flipCard: function (card) {
+      card.flipped = !card.flipped;
+    }
   }
 });
 

@@ -28,11 +28,11 @@
     </div>
 
     <ul class="flashcard-list">
-      <li v-for="card in cards">
-        <p class="card" v-show="!card.flipped"> {{ card.front }}
+      <li v-for="card in cards" v-on:click="flipCard(card)">
+        <p class="card" v-if="!card.flipped"> {{ card.front }}
           <span class="delete-card">X</span>
         </p>
-        <p class="card" v-show="card.flipped"> {{ card.back }}
+        <p class="card" v-else> {{ card.back }}
           <span class="delete-card">X</span>
         </p>
       </li>
