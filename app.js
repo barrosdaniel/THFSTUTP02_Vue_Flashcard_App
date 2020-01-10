@@ -26,7 +26,8 @@ new Vue({
   data: {
     cards: cards,
     newFront: '',
-    newBack: ''
+    newBack: '',
+    error: false
   },
   methods: {
     flipCard: function (card) {
@@ -38,7 +39,14 @@ new Vue({
         back: this.newBack,
         flipped: false
       };
-      this.cards.push(newCard);
+      if (newCard.front === '' || newCard.back === '') {
+        this.error = true;
+      } else {
+        this.cards.push(newCard);
+        this.error = false;
+      }
+      this.newFront = '';
+      this.newBack = '';
     },
     deleteCard: function (index, number) {
       this.cards.splice(index, number);
@@ -56,4 +64,5 @@ new Vue({
 // DONE 4.2 - Add new card to cards array
 // DONE 5 - Delete cards
 // DONE 6 - Animate card flip
-// 7 - Display error message if form fields are left blank
+// DONE 7 - Display error message if form fields are left blank
+// DONE 7.1 - After error message is displayed, after a card is added remove error message
