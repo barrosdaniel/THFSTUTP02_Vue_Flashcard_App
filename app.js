@@ -54,6 +54,6 @@ new Vue({
 // DONE 4 - Add new card when the user hits enter or press the button
 // DONE 4.1 - Create new card object with new card information (from form)
 // DONE 4.2 - Add new card to cards array
-// 5 - Delete cards
-// 6 - Animate card flip
+// DONE 5 - Delete cards
+// DONE 6 - Animate card flip
 // 7 - Display error message if form fields are left blank
